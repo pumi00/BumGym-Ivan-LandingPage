@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Bum gym</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top">
+        <div class="container-fluid d-flex align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+            </a>
+
+            <!-- Links a la derecha del logo -->
+            <ul class="navbar-nav d-flex flex-row ms-3">
+                <li class="nav-item me-3">
+                    <a class="nav-link text-white" href="#">Link 1</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link text-white" href="#">Link 2</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link text-white" href="#">Link 3</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link text-white" href="#">Link 4</a>
+                </li>
+            </ul>
+
+            <!-- Instagram icon aligned right -->
+            <div class="ms-auto">
+                <a href="https://www.instagram.com" target="_blank" class="text-white fs-4">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <nav>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel"
+            style="max-height: 500px; overflow: hidden;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" class="d-block w-100"
+                        style="object-fit: cover; height: 500px;" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba" class="d-block w-100"
+                        style="object-fit: cover; height: 500px;" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" class="d-block w-100"
+                        style="object-fit: cover; height: 500px;" alt="...">
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+        <section id="marcas" style="padding: 2rem; background-color: #111; color: white;">
+            <h2 style="text-align: center; margin-bottom: 1.5rem;">Marcas de Máquinas de Gimnasio</h2>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 2rem; align-items: center; justify-items: center;">
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Life_Fitness_logo.svg" alt="Life Fitness"
+                    style="max-width: 100px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Precor_logo.svg" alt="Precor"
+                    style="max-width: 100px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Cybex_International_logo.svg" alt="Cybex"
+                    style="max-width: 100px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Technogym_logo.svg" alt="Technogym"
+                    style="max-width: 100px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Matrix_Fitness_logo.svg"
+                    alt="Matrix Fitness" style="max-width: 100px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Nautilus_Inc_logo.svg" alt="Nautilus"
+                    style="max-width: 100px;">
+
+            </div>
+        </section>
+
+        <section id="destacados"
+            style="padding: 2rem; background-color: #111; color: white; text-align: center; margin-top: 3rem;">
+            <h2>Destacados</h2>
+            <div class="imagenes-hover mx-3">
+                <div class="img-container">
+                    <img class="image mx-3"
+                        src="https://images.unsplash.com/photo-1554284126-0a177e5c765d?auto=format&fit=crop&w=500&q=60"
+                        alt="Imagen 1">
+                    <div class="overlay-text">Texto descriptivo para la imagen 1</div>
+                </div>
+                <div class="img-container mx-3">
+                    <img class="image mx-3"
+                        src="https://images.unsplash.com/photo-1517960413843-0aee66e2fe6f?auto=format&fit=crop&w=500&q=60"
+                        alt="Imagen 2">
+                    <div class="overlay-text">Texto descriptivo para la imagen 2</div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contacto"
+            style="padding: 2rem; background-color: #111; color: white; text-align: center; margin-top: 3rem;">
+            <h2>Contacto</h2>
+            <p>📞 Llámanos: <a href="tel:+1234567890" style="color: #0d6efd; text-decoration: none;">+1 234 567 890</a>
+            </p>
+        </section>
+
+    </nav>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
