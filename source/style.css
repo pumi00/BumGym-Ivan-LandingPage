@@ -17,7 +17,25 @@ h2,
 h3 {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    /* Negrita para más impacto */
+    font-style: italic;
+    margin-bottom: 2.5rem;
+    position: relative;
+
+}
+
+h1::after,
+h2::after,
+h3::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: red;
+    margin: 1.5rem auto 0 auto;
+    /* esto da 1.5rem de separación desde el texto */
+    border-radius: 2px;
+
+    /* espaciado y centrado */
 }
 
 .gradiente-footer {
