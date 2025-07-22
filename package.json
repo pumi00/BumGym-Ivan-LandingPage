@@ -1,0 +1,21 @@
+{
+  "name": "bumgym-ivan-landingpage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pumi00/BumGym-Ivan-LandingPage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pumi00/BumGym-Ivan-LandingPage/issues"
+  },
+  "homepage": "https://github.com/pumi00/BumGym-Ivan-LandingPage#readme"
+}

@@ -9,45 +9,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet" />
-
-
     <title>Bum gym</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top">
-        <div class="container-fluid d-flex align-items-center">
-            <!-- Logo -->
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24" />
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="/image.jpg" alt="Logo" width="40" height="40" />
             </a>
-
-            <!-- Links a la derecha del logo -->
-            <ul class="navbar-nav d-flex flex-row ms-3">
-                <li class="nav-item me-3">
-                    <a class="nav-link text-white" href="#">Inicio</a>
-                </li>
-                <li class="nav-item me-3">
-                    <a class="nav-link text-white" href="#">Precio</a>
-                </li>
-                <li class="nav-item me-3">
-                    <a class="nav-link text-white" href="#">Contacto</a>
-                </li>
-                <li class="nav-item me-3">
-                    <a class="nav-link text-white" href="#">Actividades</a>
-                </li>
+            <ul class="navbar-nav d-flex flex-row">
+                <li class="nav-item me-3"><a class="nav-link text-white" href="#">Inicio</a></li>
+                <li class="nav-item me-3"><a class="nav-link text-white" href="#">Precio</a></li>
+                <li class="nav-item me-3"><a class="nav-link text-white" href="#">Contacto</a></li>
+                <li class="nav-item me-3"><a class="nav-link text-white" href="#">Actividades</a></li>
             </ul>
-
-            <!-- Instagram icon aligned right -->
-            <div class="ms-auto">
-                <a href="https://www.instagram.com" target="_blank" class="text-white fs-4">
-                    <i class="bi bi-instagram"></i>
-                </a>
-            </div>
         </div>
     </nav>
 
-    <nav>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- Carrusel principal -->
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel"
             style="max-height: 500px; overflow: hidden;">
             <div class="carousel-inner">
@@ -64,8 +47,6 @@
                         style="object-fit: cover; height: 500px;" alt="..." />
                 </div>
             </div>
-
-            <!-- Controls -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -76,63 +57,54 @@
             </button>
         </div>
 
+        <!-- Marcas -->
         <section id="marcas" style="padding: 2rem; background-color: #111; color: white;">
-            <h2 style="text-align: center; margin-top: 3rem; margin-bottom: 1.5rem;">Nuestras Maquinas</h2>
-            <div class="marcas-container">
-                <div class="img-wrapper">
-                    <img src="https://cdn.freebiesupply.com/logos/large/2x/life-fitness-logo-black-and-white.png"
-                        alt="Life Fitness" />
-                </div>
-                <div class="img-wrapper mx-3">
-                    <img src="https://www.hoistfitness.com/cdn/shop/files/Hoist-Fitness-Logo-White_b2ace6e4-dd4d-4244-94fa-23f246a93b85.png?v=1704273603"
-                        alt="Hoist" />
-                </div>
-                <div class="img-wrapper mx-3">
-                    <img class="cybex-img"
+            <h2 class="text-center my-4">Nuestras Maquinas</h2>
+            <div class="marcas-container d-flex justify-content-center align-items-center flex-wrap gap-3">
+                <div class="img-wrapper"><img
+                        src="https://cdn.freebiesupply.com/logos/large/2x/life-fitness-logo-black-and-white.png"
+                        alt="Life Fitness" /></div>
+                <div class="img-wrapper"><img
+                        src="https://www.hoistfitness.com/cdn/shop/files/Hoist-Fitness-Logo-White_b2ace6e4-dd4d-4244-94fa-23f246a93b85.png?v=1704273603"
+                        alt="Hoist" /></div>
+                <div class="img-wrapper"><img class="cybex-img"
                         src="https://cdn11.bigcommerce.com/s-6ss7jhuwuc/product_images/uploaded_images/cybex-logo-bc.png"
-                        alt="Cybex" />
-                </div>
-                <div class="img-wrapper mx-3">
-                    <img src="https://www.fit-maker.com/cdn/shop/files/Diseno_sin_titulo_38_220x@2x.png?v=1749110590"
-                        alt="FitMaker MC" />
-                </div>
-                <div class="img-wrapper mx-3">
-                    <img class="nautilus-img" src="https://iconape.com/wp-content/files/pg/81116/svg/nautilus-logo.svg"
-                        alt="Nautilus" />
+                        alt="Cybex" /></div>
+                <div class="img-wrapper"><img
+                        src="https://www.fit-maker.com/cdn/shop/files/Diseno_sin_titulo_38_220x@2x.png?v=1749110590"
+                        alt="FitMaker MC" /></div>
+                <div class="img-wrapper"><img class="nautilus-img"
+                        src="https://iconape.com/wp-content/files/pg/81116/svg/nautilus-logo.svg" alt="Nautilus" />
                 </div>
             </div>
         </section>
 
+        <!-- Carousel Triple -->
         <section id="carousel-triple" style="padding: 2rem; background-color: #111; color: white; margin-top: 3rem;">
-            <h2 class="text-center mb-4">Carrusel Triple</h2>
-
+            <h2 class="text-center mb-4">Nuestro Centro</h2>
             <div id="carouselTripleExample" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-
                     <div class="carousel-item active">
                         <div class="d-flex justify-content-center gap-3">
                             <img src="https://e0.pxfuel.com/wallpapers/824/165/desktop-wallpaper-src-best-gym-background-data-id-gym-1920-x-1080-gym.jpg"
                                 class="d-block" style="width: 30%; border-radius:8px;" alt="Imagen 1" />
-                            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltfGVufDB8fDB8fHww"
-                                class="d-block" style="width: 30%; border-radius:8px;" alt="Imagen 2" />
-                            <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=300&q=60"
-                                class="d-block" style="width: 30%; border-radius:8px;" alt="Imagen 3" />
+                            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" class="d-block"
+                                style="width: 30%; border-radius:8px;" alt="Imagen 2" />
+                            <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" class="d-block"
+                                style="width: 30%; border-radius:8px;" alt="Imagen 3" />
                         </div>
                     </div>
-
                     <div class="carousel-item">
                         <div class="d-flex justify-content-center gap-3">
                             <img src="https://img3.wallspic.com/crops/3/6/3/0/20363/20363-aptitud_fisica-equipo_de_ejercicio-el_entrenamiento_de_la_fuerza-barra-neumatico-1920x1080.jpg"
                                 class="d-block" style="width: 30%; border-radius:8px;" alt="Imagen 4" />
-                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=300&q=60"
-                                class="d-block" style="width: 30%; border-radius:8px;" alt="Imagen 5" />
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" class="d-block"
+                                style="width: 30%; border-radius:8px;" alt="Imagen 5" />
                             <img src="https://img3.wallspic.com/crops/3/6/3/0/20363/20363-aptitud_fisica-equipo_de_ejercicio-el_entrenamiento_de_la_fuerza-barra-neumatico-1920x1080.jpg"
                                 class="d-block" style="width: 30%; border-radius:8px;" alt="Imagen 6" />
                         </div>
                     </div>
-
                 </div>
-
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselTripleExample"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -146,46 +118,87 @@
             </div>
         </section>
 
+        <!-- Apúntate -->
         <section id="destacados"
             style="padding: 2rem; background-color: #111; color: white; text-align: center; margin-top: 3rem;">
-            <h2>Destacados</h2>
+            <h2>Apuntate</h2>
             <div class="imagenes-hover">
                 <div class="img-container">
                     <img class="image"
                         src="https://img.freepik.com/foto-gratis/vista-angulo-hombre-musculoso-irreconocible-preparandose-levantar-barra-club-salud_637285-2497.jpg?semt=ais_hybrid&w=740"
                         alt="Imagen 1" />
-                    <div class="overlay-text">Horario: 12,00 - 13,00</div>
+                    <div class="overlay-text">Clases de MMA 🥊
+                        Entrena con nosotros y aprende técnicas de Muay Thai, Jiu-Jitsu, boxeo y lucha en un solo
+                        programa. ¡Para todos los niveles!</div>
                 </div>
                 <div class="img-container">
                     <img class="image"
                         src="https://preview.redd.it/my-new-home-gym-v0-imdmpfv291de1.jpg?width=1080&crop=smart&auto=webp&s=6548281e33303f269c66252727b6bf06c604d59a"
                         alt="Imagen 2" />
-                    <div class="overlay-text">Texto descriptivo para la imagen 2</div>
+                    <div class="overlay-text">Clases de Pilates 🧘‍♀️
+                        Mejora tu postura, flexibilidad y fuerza con nuestras clases de Pilates. ¡Aptas para todos los
+                        niveles!
+
+                    </div>
                 </div>
                 <div class="img-container">
                     <img class="image"
                         src="https://img.freepik.com/foto-gratis/vista-angulo-hombre-musculoso-irreconocible-preparandose-levantar-barra-club-salud_637285-2497.jpg?semt=ais_hybrid&w=740"
                         alt="Imagen 1" />
-                    <div class="overlay-text">Texto descriptivo para la imagen 1</div>
+                    <div class="overlay-text">Fisioterapia 💆‍♂️
+                        Recupera tu bienestar con sesiones personalizadas de fisioterapia. Tratamientos para lesiones,
+                        dolores y prevención.</div>
                 </div>
                 <div class="img-container">
                     <img class="image"
                         src="https://preview.redd.it/my-new-home-gym-v0-imdmpfv291de1.jpg?width=1080&crop=smart&auto=webp&s=6548281e33303f269c66252727b6bf06c604d59a"
                         alt="Imagen 2" />
-                    <div class="overlay-text">Texto descriptivo para la imagen 2</div>
+                    <div class="overlay-text">Sesiones Personalizadas 💪
+                        Entrena con un plan hecho solo para ti. Objetivos claros, seguimiento constante y resultados
+                        reales.
+
+                    </div>
                 </div>
             </div>
         </section>
+    </main>
 
-        <section id="contacto" class="gradiente-footer"
-            style="padding: 2rem; color: white; text-align: center; margin-top: 3rem;">
-            <h2>Contacto</h2>
-            <p>📞 Llámanos: <a href="tel:+1234567890" style="color: #0d6efd; text-decoration: none;">+1 234 567 890</a>
-            </p>
-            <img src="https://www.google.com/maps/vt/data=tRjMq7hYz4ZjLvzmW1WUa7libStufHG7h2AV1nee_NB_ntT3rEON3gAuir3qk16GaZbpG_JXBYqpfpA4w1OnHqqHGeLodlFiVtsawVBA6TnXIpwiChAJgRlMZsM_grA9KckEjjxSPIgtoTZbbLCqGbuhh2CXw4Z0W0Flt9Dg2l75Uz92VQ&w=241&h=80"
-                alt="">
+    <!-- Contacto -->
+    <footer>
+        <section id="contacto" class="contacto-section">
+            <h2>Contáctanos</h2>
+            <div class="contacto-container">
+
+                <!-- Columna izquierda: formulario -->
+                <div class="contacto-form">
+                    <form action="/enviar-formulario" method="POST">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+
+                <!-- Columna derecha: mapa -->
+                <div class="contacto-imagen">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2956.894951273647!2d-8.510105123306097!3d42.17392854683962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2581b246d0699d%3A0xf9a0938a7847dc55!2sBum%20Gym!5e0!3m2!1sen!2ses!4v1753194538201!5m2!1sen!2ses"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
         </section>
-    </nav>
+
+
+
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"

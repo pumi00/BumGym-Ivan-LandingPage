@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 
-
 /* Fondo negro sólido para toda la página */
 html,
 body {
@@ -10,6 +9,12 @@ body {
     margin: 0;
     background-color: #111;
     color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 h1,
@@ -20,7 +25,6 @@ h3 {
     font-style: italic;
     margin-bottom: 2.5rem;
     position: relative;
-
 }
 
 h1::after,
@@ -32,45 +36,35 @@ h3::after {
     height: 4px;
     background-color: red;
     margin: 1.5rem auto 0 auto;
-    /* esto da 1.5rem de separación desde el texto */
     border-radius: 2px;
-
-    /* espaciado y centrado */
 }
 
 .gradiente-footer {
     position: relative;
     width: 100%;
-    height: 220px;
+    height: auto;
     background: linear-gradient(to bottom, #00000000, rgba(255, 0, 0, 0.3));
     overflow: hidden;
     z-index: 1;
 }
 
-
-/* Contenedor con fondo negro semitransparente + blur para efecto elegante */
 .container {
     background-color: rgba(0, 0, 0, 0.7);
-    /* negro con opacidad 70% */
     backdrop-filter: blur(5px);
     min-height: 100vh;
     padding-top: 70px;
-    /* Para que no quede tapado el navbar fijo */
 }
 
-/* Navbar con opacidad y blur */
 .navbar.bg-dark.bg-opacity-75 {
     background-color: rgba(0, 0, 0, 0.75) !important;
     backdrop-filter: blur(10px);
 }
 
-/* Estilos para la sección destacados con imágenes al 100% de ancho */
 .imagenes-hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.25rem;
-    /* antes tenías 0.5rem */
     margin-top: 1rem;
     width: 100%;
 }
@@ -78,7 +72,7 @@ h3::after {
 .img-container {
     position: relative;
     flex: 1 1 48%;
-    /* permite que quepan 2 por fila con poco espacio entre ellas */
+    border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
     border-radius: 0px;
@@ -86,7 +80,6 @@ h3::after {
     max-width: 100%;
     height: 180px;
     margin: 0;
-    /* importante */
 }
 
 .img-container img {
@@ -101,24 +94,27 @@ h3::after {
 
 .overlay-text {
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.6);
     color: white;
-    width: 100%;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
     opacity: 0;
     transition: opacity 0.3s ease;
     font-size: 1rem;
     text-align: center;
     z-index: 2;
-    /* por encima del degradado */
+    border-radius: inherit;
 }
 
-/* ✅ Sombra negra para imágenes destacadas y carruseles */
 .img-container img,
 .carousel-item img {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-    border-radius: 8px;
 }
 
 .img-container::after {
@@ -131,21 +127,15 @@ h3::after {
     pointer-events: none;
     background: radial-gradient(circle,
             rgba(0, 0, 0, 0) 60%,
-            /* centro totalmente transparente */
-            rgba(0, 0, 0, 0.9) 100%
-            /* bordes muy oscuros */
-        );
+            rgba(0, 0, 0, 0.9) 100%);
     z-index: 1;
-    border-radius: 8px;
+    border-radius: inherit;
 }
 
-
-/* Zoom imagen al hover */
 .img-container:hover img {
     transform: scale(1.05);
 }
 
-/* Texto overlay oculto por defecto */
 .overlay-text {
     position: absolute;
     bottom: 0;
@@ -159,28 +149,42 @@ h3::after {
     text-align: center;
 }
 
-/* Mostrar texto al hacer hover */
 .img-container:hover .overlay-text {
     opacity: 1;
 }
 
-/* Links blancos */
 .nav-link,
 .navbar a,
 .navbar i {
     color: white !important;
 }
 
-/* Ajusta secciones */
 #marcas,
 #contacto {
     background-color: transparent;
-    /* Que hereden el fondo con opacidad del contenedor */
 }
 
-/* Responsive para pantallas muy pequeñas: imágenes apiladas */
+/* Responsive para pantallas muy pequeñas */
 @media (max-width: 600px) {
     .img-container {
+        flex: 1 1 100%;
+    }
+
+    #carouselTripleExample .carousel-item .d-flex {
+        flex-direction: column;
+    }
+
+    #carouselTripleExample img {
+        width: 100% !important;
+        height: 200px;
+    }
+
+    .contacto-container {
+        flex-direction: column;
+    }
+
+    .contacto-form,
+    .contacto-imagen {
         flex: 1 1 100%;
     }
 }
@@ -191,7 +195,6 @@ footer.footer-con-humo {
     color: white;
     padding: 2rem 1rem;
     overflow: hidden;
-
     z-index: 1;
 }
 
@@ -220,11 +223,87 @@ footer.footer-con-humo {
     display: block;
 }
 
-/* Blanco para el logo Cybex */
 .cybex-img {
     filter: brightness(0) invert(1);
 }
 
 .nautilus-img {
     filter: brightness(0) invert(1);
+}
+
+/* 🔥 NUEVO: Estilos formulario contacto + imagen + mapa */
+.contacto-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(255, 0, 0, 0.15));
+}
+
+.contacto-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacto-form {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contacto h2 {
+    text-align: center;
+}
+
+.contacto-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    background-color: #222;
+    border: 1px solid #444;
+    color: white;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contacto-form button {
+    background-color: red;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contacto-form button:hover {
+    background-color: darkred;
+}
+
+.contacto-info p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.contacto-imagen {
+    flex: 1 1 45%;
+}
+
+.contacto-imagen img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 300px;
 }
