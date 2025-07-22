@@ -12,37 +12,40 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Ruta para recibir el formulario
-app.post('/enviar-formulario', (req, res) => {
+const nodemailer = require('nodemailer');
+
+app.post('/enviar-formulario', async (req, res) => {
     const { nombre, email, mensaje } = req.body;
 
     if (!nombre || !email || !mensaje) {
-        return res.status(400).send('Por favor completa todos los campos.');
+        return res.status(400).send('Faltan campos');
     }
 
-    // Configura tu cuenta de correo aquí
+    // Configura aquí tu correo Gmail (usa contraseña de aplicación)
     const transporter = nodemailer.createTransport({
-        service: 'gmail', // o el servicio que uses
+        service: 'gmail',
         auth: {
-            user: 'tuemail@gmail.com',
-            pass: 'tucontraseña_app', // usa contraseña de app o similar
+            user: 'ivanperezgonzalez123@gmail.com',          // Tu correo
+            pass: 'TU_CONTRASENA_DE_APP',         // No tu contraseña normal
         },
     });
 
     const mailOptions = {
         from: email,
-        to: 'tuemail@gmail.com',
-        subject: `Nuevo mensaje de contacto de ${nombre}`,
+        to: 'TU_CORREO@gmail.com',             // Donde lo recibes
+        subject: `Nuevo mensaje de ${nombre}`,
         text: `Nombre: ${nombre}\nEmail: ${email}\nMensaje: ${mensaje}`,
     };
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error(error);
-            return res.status(500).send('Error al enviar el correo.');
-        }
-        res.send('Mensaje enviado correctamente. ¡Gracias!');
-    });
+    try {
+        await transporter.sendMail(mailOptions);
+        res.send('Correo enviado correctamente');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error al enviar el correo');
+    }
 });
+
 
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);
