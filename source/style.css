@@ -117,6 +117,27 @@ h3::after {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
+.carousel-inner {
+    max-height: 500px;
+    /* altura máxima del carrusel */
+    overflow: hidden;
+    /* evita desbordes */
+}
+
+.carousel-item img {
+    width: 100%;
+    /* que ocupe todo el ancho */
+    height: 500px;
+    /* fuerza a ocupar la altura del carrusel */
+    object-fit: cover;
+    /* recorta pero rellena todo */
+    object-position: center;
+    /* centra el recorte */
+    display: block;
+}
+
+
+
 .img-container::after {
     content: "";
     position: absolute;

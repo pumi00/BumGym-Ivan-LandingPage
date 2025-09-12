@@ -21,41 +21,100 @@
             </a>
             <ul class="navbar-nav d-flex flex-row">
                 <li class="nav-item me-3"><a class="nav-link text-white" href="#home">Inicio</a></li>
-                <li class="nav-item me-3"><a class="nav-link text-white" href="#contacto">Precio</a></li>
+                <li class="nav-item me-3"> <a class="nav-link text-white" data-bs-toggle="modal"
+                        data-bs-target="#horarioModal" href="#">Horario</a>
+                </li>
                 <li class="nav-item me-3"><a class="nav-link text-white" href="#contacto">Contacto</a></li>
                 <li class="nav-item me-3"><a class="nav-link text-white" href="#destacados">Actividades</a></li>
             </ul>
         </div>
+
+        <div class="modal fade" id="horarioModal" tabindex="-1" aria-labelledby="horarioModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="background-color: #000; color: #fff; border: 2px solid black;">
+
+                    <!-- HEADER -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="horarioModalLabel">Horario del Gimnasio</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+
+                    <!-- BODY -->
+                    <div class="modal-body">
+                        <table class="table text-center table-dark table-striped">
+                            <thead style="color: #fff;">
+                                <tr>
+                                    <th>Día</th>
+                                    <th>Mañana</th>
+                                    <th>Tarde</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lunes - Viernes</td>
+                                    <td>7:30 - 12:00</td>
+                                    <td>16:00 - 23:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Sábado</td>
+                                    <td>10:00 - 14:00</td>
+                                    <td>17:00 - 20:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Domingo</td>
+                                    <td>10:00 - 14:00</td>
+                                    <td>Cerrado</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="text-center" style="color: #bbb;">Clases especiales: Consulta al +34 número de
+                            teléfono</p>
+                    </div>
+
+                    <!-- FOOTER -->
+                    <div class="modal-footer" style="border-top: 2px solid #ff0000;">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
     </nav>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main>
         <!-- Carrusel principal -->
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel"
-            style="max-height: 500px; overflow: hidden;">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
+
                 <div class="carousel-item active">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" class="d-block w-100"
-                        style="object-fit: cover; height: 500px;" alt="..." />
+                    <img src="/source/img/80235743-130a-48b5-8763-db220a2cb5a2.JPG" class="d-block w-100" alt="..." />
                 </div>
+
                 <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba" class="d-block w-100"
-                        style="object-fit: cover; height: 500px;" alt="..." />
+                    <img src="/source/img/273d432a-462b-4b48-a691-5af6ce47d77f.JPG" class="d-block w-100" alt="..." />
                 </div>
+
                 <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" class="d-block w-100"
-                        style="object-fit: cover; height: 500px;" alt="..." />
+                    <img src="/source/img/d50580f4-8ee8-4142-8b7f-9f5dd532fb90 3.JPG" class="d-block w-100" alt="..." />
                 </div>
+
             </div>
+
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
+
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+
 
         <!-- Marcas -->
         <section id="marcas" style="padding: 2rem; background-color: #111; color: white;">
@@ -121,7 +180,7 @@
         <!-- Apúntate -->
         <section id="destacados"
             style="padding: 2rem; background-color: #111; color: white; text-align: center; margin-top: 3rem;">
-            <h2>Apuntate</h2>
+            <h2>Apúntate</h2>
             <div class="imagenes-hover">
                 <div class="img-container">
                     <img class="image" src="/source/img/mma.jpeg" alt="Imagen 1" />
