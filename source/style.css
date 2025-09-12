@@ -136,8 +136,6 @@ h3::after {
     display: block;
 }
 
-
-
 .img-container::after {
     content: "";
     position: absolute;
