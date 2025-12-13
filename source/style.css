@@ -5,12 +5,9 @@
 /* Fondo negro sólido para toda la página */
 html,
 body {
-    height: 100%;
     margin: 0;
     background-color: #111;
     color: white;
-    display: flex;
-    flex-direction: column;
 }
 
 main {
@@ -113,10 +110,6 @@ main .container {
 }
 
 .img-container img,
-.carousel-item img {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-}
-
 .carousel-inner {
     max-height: 500px;
     /* altura máxima del carrusel */
@@ -124,17 +117,7 @@ main .container {
     /* evita desbordes */
 }
 
-.carousel-item img {
-    width: 100%;
-    /* que ocupe todo el ancho */
-    height: 500px;
-    /* fuerza a ocupar la altura del carrusel */
-    object-fit: cover;
-    /* recorta pero rellena todo */
-    object-position: center;
-    /* centra el recorte */
-    display: block;
-}
+
 
 .img-container::after {
     content: "";
@@ -208,13 +191,27 @@ main .container {
     }
 }
 
-#carouselTripleExample .carousel-item img {
-    width: 28%;
-    height: auto;
-    border-radius: 8px;
+.carousel-item img {
+    height: 70vh;
     object-fit: cover;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 45vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .marcas-container img {
+        max-width: 100px;
+    }
+}
+
+.marcas-container img {
+    max-width: 140px;
+    width: 100%;
+    filter: brightness(0) invert(1);
 }
 
 #carouselTripleExample .carousel-item img:hover {
@@ -343,9 +340,7 @@ footer.footer-con-humo {
 #carouselExample .carousel-item img {
     width: 100%;
     height: auto;
-    /* elimina el height fijo */
     max-height: 500px;
-    /* opcional: limita altura */
     object-fit: cover;
     object-position: center;
     display: block;
@@ -355,4 +350,66 @@ footer.footer-con-humo {
 
 #carouselExample .carousel-item img:hover {
     transform: scale(1.02);
+}
+
+#carouselTripleExample .carousel-item .d-flex {
+    gap: 1rem;
+}
+
+#carouselTripleExample img {
+    width: 30%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    #carouselTripleExample .carousel-item .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #carouselTripleExample img {
+        width: 100%;
+        height: 200px;
+    }
+}
+.contacto-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacto-form,
+.card {
+    flex: 1 1 45%;
+}
+
+.contacto-imagen {
+    flex: 1 1 100%;
+}
+
+.contacto-imagen iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .contacto-form,
+    .card,
+    .contacto-imagen {
+        flex: 1 1 100%;
+    }
+}
+@media (max-width: 600px) {
+    .img-container {
+        height: 180px;
+    }
+
+    .overlay-text {
+        font-size: 0.9rem;
+    }
 }
